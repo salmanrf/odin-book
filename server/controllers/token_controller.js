@@ -13,6 +13,9 @@ const getRefreshToken = async (req, res, next) => {
     return res.sendStatus(401);
   }
 
+  console.log(req.cookies);
+  console.log(req.cookies["refresh_token"]);
+
   let decoded = jwt.decode(req.cookies["refresh_token"], {complete: true});
   const tokenId = decoded.payload && decoded.payload.tokenId;
   const userId = decoded.payload && decoded.payload.user.id;
