@@ -1,0 +1,39 @@
+@media screen and (min-width: 720px) {
+  .post-container {
+    width: 80%;
+  }
+
+  .post-header .profile-picture {
+    width: 40px;
+    height: 40px;
+  }
+
+  .post-author {
+    font-size: 16px;
+  }
+
+  .post-date {
+    font-size: 14px;
+  }
+
+  .post-text {
+    font-size: 16px;
+  }
+
+  .comment-input-wrapper input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .post-container {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .post-header .profile-picture {
+    margin-right: 0;
+    justify-self: center;
+  }
+}

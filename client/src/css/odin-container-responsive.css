@@ -1,0 +1,80 @@
+@media screen and (min-width: 720px) {
+  #nav-user {
+    margin-right: 10px;
+  }
+
+  #nav-user a {
+    display: block;
+  }
+
+  #search-container {
+    width: 100%;
+  }
+
+  #search-input {
+    width: 275px;
+  }
+
+  .friend-list-button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  #odin-container {
+    overflow-x: visible;
+  }
+
+  #odin-header {
+    padding: 0 35px;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .friend-list-button {
+    display: none;
+  }
+
+  .nav-icon-container {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-icon-container svg {
+    width: 22px;
+    height: auto;
+  }
+  
+  #user-wall {
+    position: relative;
+    display: grid;
+    grid-template-columns: 275px auto 275px;
+  }
+
+  #sidebar {
+    position: fixed;
+    left: 0;
+    width: 275px;
+    padding-top: 80px;
+  }
+
+  #friend-list-container {
+    position: fixed;
+    right: 0;
+    width: 275px;
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #sidebar {
+    width: 350px;
+  }
+
+  #friend-list-container {
+    width: 350px;
+  }
+}

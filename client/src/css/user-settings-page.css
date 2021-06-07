@@ -1,0 +1,83 @@
+#user-settings-page {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-settings-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background: var(--post-container-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#user-settings-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(224, 96%, 75%);
+}
+
+#user-settings-container #signin-form {
+  width: 80%;
+}
+
+#user-settings-container #signin-form .file-validation-msg {
+  margin-bottom: 10px;
+}
+
+#submit-settings {
+  align-self: center;
+  width: 125px;
+  height: 35px;
+  margin-top: 25px;
+  padding: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(227, 58%, 65%);
+  transition: background 150ms ease-in-out;
+}
+
+#submit-settings:hover {
+  background: hsl(227, 58%, 60%);
+}
+
+#submit-settings span {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#submit-settings img {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 640px) {
+  #user-settings-container #signin-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #user-settings-container {
+    width: 80%;
+    height: 95%;
+    padding-top: 25px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #user-settings-container {
+    width: 60%;
+  }
+}

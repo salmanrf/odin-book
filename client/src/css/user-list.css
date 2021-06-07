@@ -1,0 +1,140 @@
+.post-list {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-list-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(224, 96%, 70%);
+}
+
+/* #user-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.user-container {
+  margin-bottom: 20px;
+  width: 93.75%;
+  min-width: 275px;
+  /* max-width: 500px; */
+  padding: 20px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background: var(--post-container-background);
+  transform: translateY(5%);
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+  border-radius: 5px;
+}
+
+.user-container .profile-picture {
+  width: 40px;
+  height: 40px;
+}
+
+.user-display-name {
+  grid-column: 2 / 7;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(224, 96%, 80%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-request-btn {
+  grid-column: 7 / 13;
+  justify-self: end;
+  width: 125px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  background: hsl(224, 96%, 65%);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.friend-request-btn:hover {
+  background: hsl(224, 96%, 60%);
+}
+
+.accept, .reject {
+  width: 75px;
+}
+
+.accept {
+  background: hsl(224, 96%, 65%);
+}
+
+.accept:hover {
+  background: hsl(224, 96%, 60%);
+}
+
+.reject {
+  background: hsl(333, 81%, 65%);
+}
+
+.reject:hover {
+  background: hsl(333, 81%, 60%);
+}
+
+.friend-request-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.friend-request-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.friend-request-options {
+  grid-column: 8 / 13;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend-request-options .friend-request-btn {
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.friend-request-options .friend-request-btn span {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .user-container {
+    width: 75%;
+  }
+} 
+
+@media screen and (min-width: 720px) {
+  .friend-request-options .friend-request-btn span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .user-container {
+    width: 550px;
+  }
+}

@@ -1,0 +1,259 @@
+#signin-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin-page .logo {
+  font-size: 32px;
+}
+
+#signin-container {
+  position: relative;
+  width: 93%;
+  margin-top: 10px;
+  padding: 30px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--post-container-background);
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+#signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: hsl(0, 0%, 0%, 20%);
+}
+
+#signin-form label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(0, 0%, 85%);
+}
+
+#signin-form input {
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 7px 15px;
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  background: hsl(243, 24%, 12%);
+}
+
+#signin-form input:focus {
+  outline: 1px solid #688FFC;
+}
+
+#signin-form input::placeholder {
+  color: hsl(0, 0%, 100%, 80%);
+}
+
+#signin-form input[type="file"] {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.profile-label-preview {
+  position: relative;
+  align-self: center;
+  width: 25%;
+  padding-top: 25%;
+  background: hsl(242, 24%, 12%);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* FUCKING IDIOT CSS FORCES TO GIVE IMG ELEMENT UGLYFUCK BORDER 
+   WHICH CAN'T BE REMOVED WHEN SRC IS EMPTY
+*/
+.profile-label-preview img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+/* WHEN SRC IS EMPTY HIDES IMG ELEMENT SO ASSHAT CSS WON'T FUCK IT UP */
+.profile-label-preview img[src=""] {
+  display: none;
+}
+/* FUCKING IDIOT CSS FORCES TO GIVE IMG ELEMENT UGLYFUCK BORDER 
+   WHICH CAN'T BE REMOVED WHEN SRC IS EMPTY
+*/
+
+.profile-label-text div {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.picture-input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 0%, 20%);
+  transition: background 150ms ease-in-out;
+}
+
+.picture-input-overlay:hover {
+  background: hsl(0, 0%, 0%, 50%);
+}
+
+.picture-input-overlay svg {
+  width: 35%;
+  height: 35%;
+}
+
+.auth-error-msg:empty, .file-validation-msg:empty {
+  margin: 0;
+}
+
+.auth-error-msg {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  color: hsl(357, 81%, 65%);
+}
+
+.file-validation-msg {
+  margin: 5px 0;
+  font-size: 13px;
+  text-align: center;
+  color: hsl(357, 81%, 65%);
+}
+
+#signin-form button, #signin-form a {
+  padding: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#signin-btn, #signin-link, #signup-btn, #signup-link {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: hsl(333, 81%, 70%);
+  transition: background 150ms ease-in-out;
+}
+
+#signin-link, #signup-link {
+  margin-top: 15px;
+}
+
+#signin-btn:hover {
+  background: hsl(333, 81%, 65%);
+}
+
+#signup-btn, #signup-link {
+  background: hsl(227, 58%, 65%);
+}
+
+#signup-btn:hover {
+  background: hsl(227, 58%, 60%);
+}
+
+#facebook-signin-btn {
+  margin-bottom: 20px;
+  background: hsl(214, 89%, 52%);
+}
+
+#demo-users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.demo-signin-btn {
+  width: 49%;
+  background: hsl(145, 80%, 42%);
+  transition: background 150ms ease-in-out;
+}
+
+.demo-signin-btn:hover {
+  background: hsl(145, 80%, 37%);
+}
+
+.section-line {
+  width: 100%;
+  height: 5px;
+  background: hsl(0, 0%, 0%, 25%);
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  #signin-container {
+    width: 446px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  #signin-page {
+    flex-direction: row;
+  }
+
+  #signin-page .logo {
+    font-size: 64px;
+  }
+
+  #signin-container {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #signin-page .logo {
+    font-size: 64px;
+  }
+
+  #signin-container {
+    width: 640px;
+  }
+
+  #signin-container {
+    margin-left: 200px;
+  }
+
+  #signin-form input {
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  #signin-form button {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+}

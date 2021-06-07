@@ -1,0 +1,52 @@
+@media screen and (min-width: 720px) {
+  #welcome h1 {
+    font-size: 48px;
+  }
+
+  #welcome p {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  #auth-links {
+    margin-top: 30px;
+  }
+
+  #landing-page-gif {
+    width: 80%;
+    height: auto;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  #welcome h1 {
+    font-size: 64px;
+  }
+
+  #welcome p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  #auth-links {
+    margin-top: 50px;
+  }
+
+  #signup, #signin {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  #signup {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #landing-page-gif {
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+  }
+}

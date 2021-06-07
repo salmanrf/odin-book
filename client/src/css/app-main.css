@@ -1,0 +1,277 @@
+.wall-main {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-post-container {
+  width: 93.75%;
+  min-width: 275px;
+  max-width: 875px;
+  background: var(--post-container-background);
+  border-radius: 5px;
+}
+
+.create-post-header {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.create-post-title {
+  width: 100%;
+}
+
+.profile-picture {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid hsl(224, 96%, 70%);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#create-post-btn {
+  width: 100%;
+  padding: 8px 10px;
+  background: hsl(243, 24%, 12%);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%, 50%);
+  cursor: pointer;
+  transition: background 150ms ease-in-out;
+}
+
+#create-post-btn:hover {
+  background: hsl(243, 24%, 10%);
+}
+
+.post-list {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: hsl(0, 0%, 0%, 80%);
+  z-index: 11;
+}
+
+.container-relative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: hsl(0, 0%, 0%, 50%);
+}
+
+.post-form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 93.75%;
+  max-width: 450px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  background: var(--post-container-background);
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: 14;
+}
+
+.post-form-container .post-header {
+  align-self: center;
+  width: 95%;
+  padding: 15px 0;
+}
+
+.post-form-container .post-author {
+  font-size: 16px;
+}
+
+.post-form-title {
+  position: relative;
+  padding: 10px;
+  font-size: 18px;
+  color: hsl(224, 96%, 70%);
+  text-align: center;
+}
+
+.post-form-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 95%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: hsl(224, 96%, 70%, 50%);
+}
+
+.post-form-container textarea {
+  width: 95%;
+  padding: 5px 0;
+  display: block;
+  align-self: center;
+  background: hsl(0, 0%, 100%, 0%);
+  font-size: 16px;
+  color: white;
+  resize: none;
+}
+
+.post-form-container textarea::placeholder {
+  font-size: 18px;
+}
+
+.post-form-container textarea:focus {
+  outline: none;
+}
+
+.add-to-post {
+  align-self: center;
+  width: 95%;
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid hsl(224, 96%, 70%);
+  border-radius: 5px;
+}
+
+.add-to-post span {
+  display: block;
+  color: white;
+  font-size: 14px;
+}
+
+.post-form-control {
+  align-self: center;
+  width: 95%;
+  margin: 10px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-form-control button {
+  align-self: flex-end;
+  padding: 5px 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  background: hsl(224, 96%, 65%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-post label {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(243, 24%, 17%, 0%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.add-to-post label:hover {
+  background: hsl(243, 24%, 10%);
+}
+
+.add-to-post input[type="file"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.add-to-post label img {
+  width: 70%;
+  height: 70%;
+}
+
+.post-validation-msg {
+  align-self: center;
+  width: 95%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.post-validation-msg span {
+  font-size: 12px;
+  color: hsl(350, 61%, 63%);
+}
+
+.post-image-preview {
+  align-self: center;
+  width: 95%;
+  height: 120px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border: 1px solid hsl(224, 96%, 70%);
+  border-radius: 5px;
+}
+
+.preview-image-container {
+  flex-shrink: 0;
+  position: relative;
+  width: 220px;
+  height: 100px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.preview-image-container .container-relative-overlay {
+  background: hsl(0, 0%, 0%, 40%);
+}
+
+.preview-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.remove-img-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-5px, 5px);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: hsl(0, 0%, 90%);
+  cursor: pointer;
+}
+
+.remove-img-btn svg {
+  width: 100%;
+  height: 100%;
+  color: hsl(224, 96%, 60%);
+}

@@ -1,0 +1,32 @@
+@media screen and (min-width: 720px) {
+  .create-post-container {
+    width: 80%;
+  }
+
+  .create-post-container .profile-picture {
+    width: 40px;
+    height: 40px;
+  }
+
+  #create-post-btn {
+    font-size: 14px;
+  }
+
+  .add-like-btn span, .add-comment-btn span {
+    display: block;
+  }
+
+  .post-new-reaction img {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .wall-main {
+    grid-column: 2 / 3;
+  }
+
+  .create-post-container {
+    width: 45%;
+  }
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+  --main-font: 'Ubuntu', sans-serif;
+  --secondary-font: 'Source Code Pro', monospace;
+  --solid-container-background: hsl(242, 24%, 21%);
+  /* background: hsl(243, 24%, 18%) */
+  --aside-container-background: hsl(243, 24%, 18%);
+  --aside-container-background-hover: hsl(243, 24%, 20%);
+  --post-container-background: hsl(243, 24%, 17%);
+  --post-comment-background: hsl(243, 24%, 15%);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input, textarea {
+  border: none;
+}
+
+button {
+  border: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-color: hsl(224, 90%, 70%) hsl(243, 24%, 10%);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track  {
+  background: hsl(243, 24%, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(224, 90%, 70%);
+}
+
+body {
+  background: var(--solid-container-background);
+  font-family: var(--main-font);
+}
+
+.App {
+  min-height: 100vh;
+}

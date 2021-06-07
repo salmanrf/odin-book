@@ -1,0 +1,104 @@
+#landing-page {
+  height: 100vh;
+}
+
+#landing-page header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+#landing-page main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome {
+  margin: 0 30px;
+  /* margin-top: 60px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+#welcome p {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+#landing-page-gif {
+  position: relative;
+  top: 10px;
+  width: 350px;
+  height: 175px;
+  margin-top: 15px;
+  box-shadow: none;
+  /* box-shadow: 2px 2px 4px 4px hsl(0, 0%, 0%, 50%); */
+  overflow: hidden;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+#landing-page-gif img {
+  width: 100%;
+  height: 100%;
+}
+
+#auth-links {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup, .signin {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 10px 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  box-shadow: 5px 5px 1px 0 hsl(0, 0%, 0%, 25%);
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.signup:hover, .signin:hover {
+  top: -2px;
+  left: -2px;
+  box-shadow: 7px 7px 1px 0 hsl(0, 0%, 0%, 25%);
+}
+
+.signup {
+  margin-right: 20px;
+  background: hsl(227, 58%, 65%);
+}
+
+.signin {
+  background: hsl(333, 81%, 69%);
+}
+
