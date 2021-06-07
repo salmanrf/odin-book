@@ -117,21 +117,11 @@
   margin-left: 5px;
 }
 
-.friend-request-options .friend-request-btn span {
-  display: none;
-}
-
 @media screen and (min-width: 480px) {
   .user-container {
     width: 75%;
   }
 } 
-
-@media screen and (min-width: 720px) {
-  .friend-request-options .friend-request-btn span {
-    display: block;
-  }
-}
 
 @media screen and (min-width: 1366px) {
   .user-container {
