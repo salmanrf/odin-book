@@ -11,6 +11,7 @@ const Logout = () => {
   
   useEffect(() => {
     token.set(null);
+    token.resetTimeout();
 
     getSignout()
       .then(() => history.push("/"))

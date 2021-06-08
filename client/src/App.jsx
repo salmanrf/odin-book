@@ -12,6 +12,7 @@ import Loading from "./pages/components/Loading";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [timeoutId, setTimeoutId] = useState(null);
   const [token, setToken] = useState(null);
   
   useEffect(() => {
@@ -28,18 +29,21 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {  
-      getRefreshToken()
-        .then((res) => {
-          if(res.status === 200)
-            return res.json();
-          else 
-            return setToken(null);
-        })
-        .then((res) => (res && res.token) && setToken(res.token))
-      // When token is set this effect will be triggered
-      // therefore automatically refreshing token every 4.5 minutes 
-    }, 1000 * 60 * 4.5)
+    const newTimeoutId = 
+      setTimeout(() => {  
+        getRefreshToken()
+          .then((res) => {
+            if(res.status === 200)
+              return res.json();
+            else 
+              return setToken(null);
+          })
+          .then((res) => (res && res.token) && setToken(res.token))
+        // When token is set this effect will be triggered
+        // therefore automatically refreshing token every 4.5 minutes 
+      }, 1000 * 60 * 4.5);
+
+    setTimeoutId(newTimeoutId);
   }, [token]);
   
   return (
@@ -56,7 +60,15 @@ const App = () => {
           </TokenContext.Provider>
         </Route>
         <Route path="/logout">
-          <TokenContext.Provider value={{token: {value: token, set: setToken}}}>
+          <TokenContext.Provider 
+            value={{
+              token: {
+                value: token, 
+                set: setToken, 
+                resetTimeout: () => clearTimeout(timeoutId)
+              }
+            }}
+          >
             <Logout />
           </TokenContext.Provider>
         </Route>

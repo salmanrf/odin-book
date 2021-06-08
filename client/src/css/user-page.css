@@ -44,7 +44,8 @@
 }
 
 .header-display-name {
-  height: 70px;
+  min-height: 70px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +55,7 @@
 
 .header-display-name span {
   display: block;
+  text-align: center;
   font-size: 24px;
   font-weight: 700;
   color: white;
@@ -263,11 +265,16 @@
 }
 
 .user-friends-display-name {
+  width: 100%;
+}
+
+.user-friends-display-name div {
   margin-top: 5px;
   color: hsl(0, 0%, 80%);
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
