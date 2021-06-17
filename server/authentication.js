@@ -110,7 +110,7 @@ exports.signin = [
         user.save()
       ]);
   
-      res.cookie("refresh_token", refreshToken, {sameSite: false, httpOnly: true, maxAge: 1000 * 60 * 60 * 24 * 3, secure: true});
+      res.cookie("refresh_token", refreshToken, {sameSite: "none", httpOnly: true, maxAge: 1000 * 60 * 60 * 24 * 3, secure: true});
       res.status(200).json({token: accessToken});
     } catch(err) {
       res.status(500).json({error: err.message});

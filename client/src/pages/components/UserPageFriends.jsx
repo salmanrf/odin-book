@@ -40,7 +40,7 @@ const UserPageFriends = () => {
                 <div className="photo-overlay"></div>
               </Link>
               <Link to={`/user/${f._id}`} className="user-friends-display-name">
-                <span>{f.display_name}</span>
+                <div>{f.display_name}</div>
               </Link>
             </div>
           ))
